@@ -1,0 +1,511 @@
+Profile ----------------------------------------------------------------------------------------------------------------------------
+  <section class="bg-cian-main h-screen font-comfortaa">
+    <div class="pt-16 px-10">
+      <h1 class="font-comfortaa text-2xl text-white pb-3">Perfil</h1>
+    </div>
+    <div class="bg-white rounded-t-[2.5rem]">
+      <button class="bg-cian-secondary rounded-full h-9 w-9 absolute right-3 top-32 "><img class="h-auto w-auto p-1.5"
+          src="./src/assets/configuration.svg" alt="config"></button>
+      <div class="py-5">
+        <div class="flex gap-3 justify-center items-end pb-3">
+          <button class=" rounded-full h-20 w-20"> <img class=" rounded-full" src="./src/assets/fotoPerfil2.png"
+              alt=""></button>
+          <div class="flex">
+            <img class="rounded-full h-30 w-30 " src="./src/assets/fotoPerfil.png" alt="main">
+            <button class="absolute right-37 transform translate-y-23 bg-orange-light rounded-full h-8 w-8 "><img
+                class="p-2" src="./src/assets/cross.svg" alt=""> </button>
+          </div>
+          <button class="bg-grey-light rounded-full  h-20 w-20">
+            <img class="p-3 rounded-full" src="./src/assets/add.svg" alt="">
+          </button>
+        </div>
+        <div class="flex flex-col text-center gap-2">
+          <h2 class="font-bold text-lg">Ana Pérez Pérez</h2>
+          <p class="text-xs">1-2345-6789</p>
+        </div>
+      </div>
+
+      <div class="px-10 py-5">
+        <figure class="overflow-hidden h-40 bg-cian-secondary rounded-3xl relative">
+          <img class="h-40 w-50 absolute top-10 -left-2 z-1" src="./src/assets/calendar-cian.svg" alt="Calendar">
+          <figcaption class="relative text-end pt-30 text-4xl font-extrabold text-white pr-2 pb-2 z-10">Calendario
+          </figcaption>
+        </figure>
+      </div>
+
+
+      <div class="grid grid-cols-2 gap-4 px-10 py-5">
+        <div class="">
+          <figure class="h-40 bg-orange-light overflow-hidden rounded-3xl relative">
+            <img class="absolute w-40 h-40 top-10 -left-10" src="./src/assets/medicines-orange.svg" alt="Medicines">
+          </figure>
+          <p class="text-center text-xs pt-1">Medicamentos</p>
+        </div>
+        <div class="h-40 bg-orange-light rounded-3xl">
+          <figure class="h-40 overflow-hidden relative">
+            <img class="absolute w-40 h-40 top-10 -left-10" src="./src/assets/medical-record-orange.svg"
+              alt="Medical Record">
+          </figure>
+          <p class="text-center text-xs pt-1">Registro Médico</p>
+        </div>
+      </div>
+
+      <div class="grid gap-4 px-10 py-5">
+        <button class="bg-cian-secondary p-3 rounded-lg text-xs">Información Personal</button>
+        <button class="bg-cian-secondary p-3 rounded-lg text-xs">Guardado</button>
+        <button class="bg-cian-secondary p-3 rounded-lg text-xs">Notificaciones</button>
+      </div>
+
+      <div class="grid gap-4 px-10 py-5">
+        <button class="bg-cian-secondary p-3 rounded-lg text-xs">Ayuda</button>
+        <button class="bg-cian-secondary p-3 rounded-lg text-xs">Sobre Nosotros</button>
+      </div>
+    </div>
+  </section>
+Profile-----------------------------------------------------------------------------------------------------------------------------
+
+Notificaciones ---------------------------------------------------------------------------------------------------------------------
+  <section class="bg-cian-main font-comfortaa">
+    <div class="pt-10 px-10">
+      <h1 class="font-comfortaa text-2xl text-white pb-3">Notificaciones</h1>
+    </div>
+    <div class="bg-white rounded-t-[2.5rem] h-screen px-10">
+      <div>
+        <h2 class="font-bold text-lg pt-10 mb-2">Hoy</h2>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-cian-secondary rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/health.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Dr. Jiménez Medraña</h3>
+              <p class="text-xs">Se ha agendado la cita.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">1h</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-auto w-6 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/pill.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Tomar pastillas.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">9:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/bell.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Cita médica 19 de mayo - 8:00 a. m.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">8:30</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-lg pt-10 mb-2">Ayer</h2>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/pill.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Tomar pastillas noche.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">18:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-auto w-6 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/exercise.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Hacer ejercicio de la rodilla.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">14:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-5 w-5 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/clock.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Cita médica 17 de mayo - 12:00 m. d.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">1d</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/pill.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Tomar pastillas.</p>
+            </div>
+            <div class="">
+              <p class="text-xs">1d</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-orange-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-auto w-6 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/other.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Recordatorio</h3>
+              <p class="text-xs">Sacar cita cardiología</p>
+            </div>
+            <div class="">
+              <p class="text-xs">1d</p>
+            </div>
+          </div>
+        </div>
+        <div class="py-3">
+          <div class="grid grid-cols-[10%_80%_10%] gap-3 items-center">
+            <div class="bg-cian-main rounded-full h-9 w-9 p-1.5 relative">
+              <img class="absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                src="./src/assets/health.svg" alt="notification icon">
+            </div>
+            <div class="">
+              <h3 class="text-sm">Control diario</h3>
+              <p class="text-xs">¡Cuéntanos como te has sentido hoy!</p>
+            </div>
+            <div class="">
+              <p class="text-xs">1d</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+Notificacion------------------------------------------------------------------------------------------------------------------------
+
+Buscar------------------------------------------------------------------------------------------------------------------------------
+  <section class="bg-cian-main h-screen font-comfortaa">
+    <div class="pt-16 px-10">
+      <h1 class="font-comfortaa text-2xl text-white pb-3">Buscar</h1>
+    </div>
+    <div class="bg-white rounded-t-[2.5rem] h-screen">
+      <div class="pt-8 flex flex-row text-center items-center gap-1 px-9">
+        <div class="bg-cian-secondary items-center py-1.5 pl-2 rounded-lg flex w-[80%] gap-2">
+          <img src="./src/assets/search.svg" alt="search icon" class="w-6 h-6">
+          <input class="w-[85%]" type="text">
+        </div>
+        <div class="w-[20%]">
+          <button class="text-sm text-orange-main">Buscar</button>
+        </div>
+      </div>
+      <div class="px-10 pt-8 gap-3 flex flex-col">
+        <div class="flex justify-between">
+          <p class="text-xs">Cardiologo</p>
+          <button class="text-sm text-black/50">x</button>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-xs">Jiménez Medraño</p>
+          <button class="text-sm text-black/50">x</button>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-xs">Momentum Escazú</p>
+          <button class="text-sm text-black/50">x</button>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-xs">Optometría</p>
+          <button class="text-sm text-black/50">x</button>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-xs">Cardiología</p>
+          <button class="text-sm text-black/50">x</button>
+        </div>
+      </div>
+      <div class="px-10 pt-8 ">
+        <h2 class="font-bold">Podría interesarte</h2>
+        <div class="pt-3 gap-5 flex flex-col">
+
+          <div class="flex justify-between">
+            <p class="text-xs">Clínica MedVet, Escazú</p>
+          </div>
+          
+          <div class="flex justify-between">
+            <p class="text-xs">Dr. Mariano Durán Flores- Medicina General</p>
+          </div>
+          
+          <div class="flex justify-between">
+            <p class="text-xs">Dr. Juan Mora Valverde - Medicina General</p>
+          </div>
+          
+          <div class="flex justify-between">
+            <p class="text-xs">Clínica Momentum, Curridabat</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+Buscar------------------------------------------------------------------------------------------------------------------------------
+
+Inicio------------------------------------------------------------------------------------------------------------------------------
+  <section class="font-comfortaa">
+    <div class="pt-10 px-5">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="font-extrabold text-xl">¡Hola Ana!</h1>
+          <p class="text-xs">¿Cómo te has sentido hoy?</p>
+        </div>
+        <div>
+          <button class="h-auto w-15"><img class="rounded-full" src="./src/assets/fotoPerfil.png"
+              alt="profile button"></button>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="bg-white border-cian-secondary border-5 items-center content-center gap-1 rounded-xl flex px-1 ">
+          <input class="w-[88%] h-full" type="text">
+          <button class="bg-cian-tertiary h-9 w-9 rounded-md flex items-center justify-center relative p-1.5 my-1">
+            <img src="./src/assets/search.svg" alt="search icon" class="w-8">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-5 pt-10">
+      <h2 class="text-sm">Próximos recordatorios</h2>
+      <div class="flex justify-between pt-3">
+        <div
+          class=" size-28 rounded-3xl bg-orange-light border-8 border-orange-main p-5 flex items-center justify-center">
+          <img src="./src/assets/pill.svg" alt="Recordatorio button">
+        </div>
+        <div
+          class=" size-28 rounded-3xl bg-orange-light border-8 border-orange-main p-5 flex items-center justify-center">
+          <img src="./src/assets/exercise.svg" alt="Recordatorio button">
+        </div>
+        <div
+          class=" size-28 rounded-3xl bg-orange-light border-8 border-orange-main p-5 flex items-center justify-center">
+          <img src="./src/assets/note.svg" alt="Recordatorio button">
+        </div>
+      </div>
+    </div>
+
+    <div class="px-5 pt-10">
+      <h2 class="text-sm">Categorías</h2>
+      <div class="flex gap-2 py-3">
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img class="" src="./src/assets/health.svg" alt="Category Button">
+        </div>
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img src="./src/assets/health.svg" alt="Category Button">
+        </div>
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img src="./src/assets/health.svg" alt="Category Button">
+        </div>
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img src="./src/assets/health.svg" alt="Category Button">
+        </div>
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img src="./src/assets/health.svg" alt="Category Button">
+        </div>
+        <div class="h-14 w-14 bg-cian-tertiary rounded-2xl p-3 flex items-center justify-center">
+          <img src="./src/assets/health.svg" alt="Category Button">
+        </div>
+      </div>
+      <button class="bg-cian-secondary text-white text-xs p-2 rounded-xl w-full font-bold">Ver más</button>
+    </div>
+
+    <div class="px-5 pt-10">
+      <div class="flex justify-between items-center">
+        <h2 class="text-sm">Clínicas populares</h2>
+        <button class="text-cian-main text-xs">Mostrar todas</button>
+      </div>
+      <div class="flex pt-3">
+        <div class="bg-grey-light w-70 h-40 rounded-2xl">
+          <div class="grid grid-cols-2 gap-6 px-3 py-4 h-full">
+            <div class="flex">
+              <img class="object-cover object-center rounded-2xl" src="./src/assets/medvet-dallas.jpg" alt="Clínica">
+            </div>
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-sm">MedVet</h3>
+                <p class="text-xs">Escazú, San José</p>
+                <p class="pt-3">* * * * *</p>
+              </div>
+              <div>
+                <button class="text-xs rounded-md w-full p-1 bg-orange-light text-white ">Explorar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="px-5 pt-10">
+      <div class="flex justify-between items-center ">
+        <h2 class="text-sm">Doctores populares</h2>
+        <button class="text-cian-main text-xs">Mostrar todos</button>
+      </div>
+      <div class="flex flex-col gap-3 pt-3">
+
+        <div class="bg-grey-light flex w-full h-18 rounded-2xl">
+          <div class="flex w-full gap-2 px-3 py-3">
+            <div class="flex items-center justify-center w-[15%] h-full ">
+              <img class="w-full h-full object-cover object-center rounded-xl" src="./src/assets/doctor1.jpeg" alt="Doctor1">
+            </div>
+            <div class="w-[50%] flex flex-col justify-center ">
+              <h3 class="text-xs">Mariana Durán Fuentes</h3>
+              <p class="text-xs">Médico General</p>
+              <p class="text-xs">* * * * *</p>
+            </div>
+            <div class="flex items-center justify-center w-[35%]">
+              <button class="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] ">Agendar Cita</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-grey-light flex w-full h-18 rounded-2xl">
+          <div class="flex w-full gap-2 px-3 py-3">
+            <div class="flex items-center justify-center w-[15%] h-full ">
+              <img class="w-full h-full object-cover object-center rounded-xl" src="./src/assets/doctor2.jpg" alt="Doctor2">
+            </div>
+            <div class="w-[50%] flex flex-col justify-center ">
+              <h3 class="text-xs">Juana Mora Valverde</h3>
+              <p class="text-xs">Médico General</p>
+              <p class="text-xs">* * * * *</p>
+            </div>
+            <div class="flex items-center justify-center w-[35%]">
+              <button class="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] ">Agendar Cita</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-grey-light flex w-full h-18 rounded-2xl">
+          <div class="flex w-full gap-2 px-3 py-3">
+            <div class="flex items-center justify-center w-[15%] h-full ">
+              <img class="w-full h-full object-cover object-center rounded-xl" src="./src/assets/doctor3.jpg" alt="Doctor3">
+            </div>
+            <div class="w-[50%] flex flex-col justify-center ">
+              <h3 class="text-xs">Fabián Castro López</h3>
+              <p class="text-xs">Médico General</p>
+              <p class="text-xs">* * * * *</p>
+            </div>
+            <div class="flex items-center justify-center w-[35%]">
+              <button class="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] ">Agendar Cita</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-grey-light flex w-full h-18 rounded-2xl">
+          <div class="flex w-full gap-2 px-3 py-3">
+            <div class="flex items-center justify-center w-[15%] h-full ">
+              <img class="w-full h-full object-cover object-center rounded-xl" src="./src/assets/doctor4.jpeg" alt="Doctor4">
+            </div>
+            <div class="w-[50%] flex flex-col justify-center ">
+              <h3 class="text-xs">Karen Alvarado Vargas</h3>
+              <p class="text-xs">Médico General</p>
+              <p class="text-xs">* * * * *</p>
+            </div>
+            <div class="flex items-center justify-center w-[35%]">
+              <button class="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] ">Agendar Cita</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+Inicio------------------------------------------------------------------------------------------------------------------------------
+
+Agregar recordatorio----------------------------------------------------------------------------------------------------------------
+  <section class="absolute w-full h-screen bg-white z-10 mt-50 rounded-t-4xl font-comfortaa">
+    <div class="px-5">
+      <div class="flex justify-between items-center pt-5">
+        <button class="text-xs">Cancelar</button>
+        <h1 class="text-sm">Nuevo Recordatorio</h1>
+        <button class="bg-cian-secondary w-12 h-12 rounded-full p-2"><img src="./src/assets/calendar-cian.svg"
+            alt="Calendar"></button>
+      </div>
+      <form class="pt-5 flex flex-col">
+        <div class="flex justify-between items-center py-2">
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/pill.svg" alt=""></button>
+            <p class="text-xs">Medicamentos</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/exercise.svg" alt=""></button>
+            <p class="text-xs">Ejercicios</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/bell.svg" alt=""></button>
+            <p class="text-xs">Aviso</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/clock.svg" alt=""></button>
+            <p class="text-xs">Recordatorio</p>
+          </div>
+        </div>
+        <div class="flex justify-between items-center py-2">
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/note.svg" alt=""></button>
+            <p class="text-xs">Notas</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/health.svg" alt=""></button>
+            <p class="text-xs">Doctor</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/pill.svg" alt=""></button>
+            <p class="text-xs">Comida</p>
+          </div>
+          <div class="flex flex-col items-center w-[25%] gap-2">
+            <button class="w-7 h-7"><img src="./src/assets/other.svg" alt=""></button>
+            <p class="text-xs">Otros</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pt-7">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" value="Titulo" type="text">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" value="Detalle" type="text">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" value="Agregar Ubicación" type="text">
+        </div>
+        <div class="flex flex-col gap-3 pt-7">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" type="date">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" type="time">
+        </div>
+        <div class="flex flex-col pt-7">
+          <input class="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4" value="Repetir" type="text">
+        </div>
+        <div class="flex justify-center">
+          <button class="bg-orange-main text-white text-xs py-3 mt-10 rounded-lg w-[50%]">Crear</button>
+        </div>
+      </form>
+    </div>
+  </section>
+Agregar recordatorio----------------------------------------------------------------------------------------------------------------
