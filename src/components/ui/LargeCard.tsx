@@ -1,4 +1,4 @@
-import Button from "./Button";
+import ButtonMain from "./ButtonMain";
 import RatingStars from "./RatingStars";
 interface LargeCardsProps{
     title:string;
@@ -23,7 +23,7 @@ export default function LargeCard(props:LargeCardsProps) {
                             <RatingStars value={props.starLevel}/>
                         </div>
                         <div>
-                            <Button style="text-xs rounded-md w-full p-1 bg-orange-light text-white" text="Explorar"/>
+                            <ButtonMain style="text-xs rounded-md w-full p-1 bg-orange-light text-white" text="Explorar"/>
                         </div>
                     </div>
                 </div>

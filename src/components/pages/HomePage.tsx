@@ -1,11 +1,10 @@
-import { Link } from "@tanstack/react-router";
 import ProfileAvatar from "../ui/ProfileAvatar";
-import Button from "../ui/Button";
+import Button from "../ui/ButtonMain";
 import ReminderCard from "../ui/ReminderCard";
-import LargeCard from "../ui/LargeCard";
 import SmallCard from "../ui/SmallCard";
 import BottonNavBar from "../ui/BottomNavBar";
-
+import CardSlider from "../ui/CardSlider";
+import { Link } from "@tanstack/react-router";
 
 export default function HomePage() {
 
@@ -19,6 +18,7 @@ export default function HomePage() {
                     </div>
                     <div>
                         <Link to="/profile"> <ProfileAvatar altText="Ana's Profile" imageUrl="./src/assets/fotoPerfil.png" type="small" /></Link>
+
                     </div>
                 </div>
                 <div className="pt-5">
@@ -51,14 +51,14 @@ export default function HomePage() {
                 <Button style="bg-cian-secondary text-white text-xs p-2 rounded-xl w-full font-bold" text="Ver más" />
             </div>
 
-            <div className="px-5 pt-10">
-                <div className="flex justify-between items-center">
+            <div className="pt-10">
+                <div className="flex justify-between items-center px-5">
                     <h2 className="text-sm">Clínicas populares</h2>
                     <button className="text-cian-main text-xs">Mostrar todas</button>
                 </div>
 
                 <div className="flex pt-3">
-                    <LargeCard image="./src/assets/medvet-dallas.jpg" location="Escazú, San José" starLevel={5} title="MedVet" />
+                    <CardSlider />
                 </div>
             </div>
 

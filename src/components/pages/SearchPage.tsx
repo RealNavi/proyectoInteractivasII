@@ -9,6 +9,7 @@ interface searchRecentItem {
 
 export default function SearchPage() {
     const [searchList, setSearchList] = useState<searchRecentItem[]>([]);
+
     const [inputValue, setInputValue] = useState("");
 
     function setSearchRecent(item: searchRecentItem) {
@@ -41,6 +42,7 @@ export default function SearchPage() {
                     </div>
                 </div>
                 <div className="px-10 pt-8 gap-3 flex flex-col">
+                    <h2 className="font-bold">Reciente</h2>
                     {searchList.map((item, index) => (
                         <SearchRecentItem key={index}
                             description={item.description}

@@ -1,4 +1,4 @@
-import Button from "./Button";
+import ButtonMain from "./ButtonMain";
 import RatingStars from "./RatingStars";
 
 interface SmallCardProps{
@@ -22,7 +22,7 @@ export default function SmallCard(props: SmallCardProps){
                                 <RatingStars value={props.starLevel}/>
                             </div>
                             <div className="flex items-center justify-center w-[35%]">
-                                <Button style="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] " text="Agendar Cita" />
+                                <ButtonMain style="text-xs rounded-xl p-1 bg-orange-light text-white w-[90%] h-[65%] " text="Agendar Cita" />
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import ProfileAvatar from '../ui/ProfileAvatar';
 import LargeWidget from '../ui/LargeWidget';
 import MediumWidget from '../ui/MediumWidget';
-import Button from '../ui/Button';
+import ButtonMain from '../ui/ButtonMain';
 import BottonNavBar from '../ui/BottomNavBar';
 
 interface ProfilePageProps {
@@ -16,7 +16,7 @@ export default function ProfilePage(props: ProfilePageProps) {
                 <h1 className="font-comfortaa text-2xl text-white pb-3">Perfil</h1>
             </div>
             <div className="bg-white rounded-t-[2.5rem]">
-                <Button text="hola" style='bg-cian-secondary rounded-full h-9 w-9 absolute right-3 top-32' iconClassName='h-auto w-auto p-1.5' icon='./src/assets/configuration.svg' />
+                <ButtonMain text="hola" style='bg-cian-secondary rounded-full h-9 w-9 absolute right-3 top-32' iconClassName='h-auto w-auto p-1.5' icon='./src/assets/configuration.svg' />
                 <div className="py-5">
                     <div className="flex gap-3 justify-center items-end pb-3">
                         <ProfileAvatar imageUrl="./src/assets/fotoPerfil2.png" altText="Linked Profile" type='linked'/>
@@ -43,14 +43,14 @@ export default function ProfilePage(props: ProfilePageProps) {
                 </div>
 
                 <div className="grid gap-4 px-10 py-5">
-                    <Button style='bg-cian-secondary p-3 rounded-lg text-xs' text='Información Personal'/>
-                    <Button style='bg-cian-secondary p-3 rounded-lg text-xs' text='Guardado'/>
-                    <Button style='bg-cian-secondary p-3 rounded-lg text-xs' text='Notificaciones'/>
+                    <ButtonMain style='bg-cian-secondary p-3 rounded-lg text-xs' text='Información Personal'/>
+                    <ButtonMain style='bg-cian-secondary p-3 rounded-lg text-xs' text='Guardado'/>
+                    <ButtonMain style='bg-cian-secondary p-3 rounded-lg text-xs' text='Notificaciones'/>
                 </div>
 
                 <div className="grid gap-4 px-10 py-5">
-                    <Button style='bg-cian-secondary p-3 rounded-lg text-xs' text='Ayuda'/>
-                    <Button style='bg-cian-secondary p-3 rounded-lg text-xs' text='Sobre Nosotros'/>
+                    <ButtonMain style='bg-cian-secondary p-3 rounded-lg text-xs' text='Ayuda'/>
+                    <ButtonMain style='bg-cian-secondary p-3 rounded-lg text-xs' text='Sobre Nosotros'/>
                 </div>
             </div>
             <BottonNavBar />
