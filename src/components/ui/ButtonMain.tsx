@@ -6,7 +6,7 @@ interface ButtonProps {
     type?:"button" |"submit";
 }
 
-export default function Button(props: ButtonProps) {
+export default function ButtonMain(props: ButtonProps) {
     if (props.icon != null) {
         return (
             <button type={props.type} className={`${props.style}`}><img className={props.iconClassName} src={props.icon} alt={props.text} /></button>

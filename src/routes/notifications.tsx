@@ -6,5 +6,5 @@ export const Route = createFileRoute('/notifications')({
 })
 
 function RouteComponent() {
-  return <NotificationPage time='1' />
+  return <NotificationPage />
 }
