@@ -1,4 +1,4 @@
-import {IconBrandFacebook, IconBrandAppleFilled} from "@tabler/icons-react";
+import {IconBrandFacebook, IconBrandAppleFilled, IconChevronLeft} from "@tabler/icons-react";
 
 import BackgroundLogin from "./BackgroundLogin";
 import ButtonMain from "./ButtonMain";
@@ -10,7 +10,6 @@ interface BackgroundLoginProps {
 
 interface SignInProps {
     background: BackgroundLoginProps;
-    back: string;
     title: string;
     email: string;
     password: string;
@@ -30,9 +29,9 @@ export default function SignIn(props: SignInProps) {
                             <div className="absolute inset-0 flex-col justify-center items-center" > 
                             
                                 <section className="w-3 h-5 mt-10 ml-8">
-                                    <a href="http://localhost:5173/Login.tsx">
-                                        <img src={props.back} alt="back" />
-                                    </a>
+                                    <Link to='/login'>
+                                        <IconChevronLeft/>
+                                    </Link>
                                 </section>
 
                                 <section className="flex-col justify-center items-center bg-white mt-40">                                                         

@@ -1,3 +1,6 @@
+import {IconChevronLeft} from "@tabler/icons-react";
+import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
+
 import BackgroundLogin from "./BackgroundLogin";
 import ButtonMain from "./ButtonMain";
 
@@ -8,7 +11,6 @@ interface BackgroundLoginProps {
 
 interface PasswordProps {
     background: BackgroundLoginProps;
-    back: string;
     title: string;
     button1: string;
     button2: string;
@@ -26,9 +28,9 @@ export default function NewPassword(props: PasswordProps) {
                         <section className="absolute inset-0 flex-col justify-center items-center" > 
                                     
                             <section className="w-3 h-5 mt-10 ml-8">
-                                <a href="http://localhost:5173/Login.tsx">
-                                    <img src={props.back} alt="back" />
-                                </a>
+                                <Linck to='/login'>
+                                    <IconChevronLeft/>
+                                </Linck>
                             </section>
             
                             <section className="flex-col justify-center items-center bg-white mt-40">                                                         
@@ -44,6 +46,23 @@ export default function NewPassword(props: PasswordProps) {
                                             style="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light"
                                             text={props.button1}
                                         />
+                                        <AlertDialog>
+                                            <AlertDialogTrigger asChild>
+                                                <ButtonMain 
+                                                    variant="outline"
+                                                    style="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light"
+                                                    text={props.button1}
+                                                />
+                                            </AlertDialogTrigger>
+                                            <AlertDialogContent>
+                                                <AlertDialogTitle>Fuera de servicio</AlertDialogTitle>
+                                                <AlertDialogDescription>
+                                                    Por estos momentos no se le puede brindar el servicio de cambiar su contraseña. 
+                                                    Esta funcionalidad se encuentra en pausa.
+                                                </AlertDialogDescription>
+                                                <AlertDialogCancel>Leido</AlertDialogCancel>
+                                            </AlertDialogContent>
+                                        </AlertDialog>
 
                                         <ButtonMain
                                             style="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light"

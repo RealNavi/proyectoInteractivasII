@@ -4,6 +4,8 @@ interface ButtonProps {
     icon?: string;
     iconClassName?: string;
     type?:"button" |"submit";
+
+    variant?: "outline" | "default";
 }
 
 export default function Button(props: ButtonProps) {
