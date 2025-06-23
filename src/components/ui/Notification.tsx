@@ -40,7 +40,7 @@ export default function Notification(props: NotificationProps) {
     }
 
     return (
-        <div className="grid grid-cols-[10%_80%_10%] gap-3 items-center pt-3">
+        <div className="grid grid-cols-[15%_60%_25%] gap-3 items-center pt-3">
             <div className={iconStyleClass}>
                 {selectedIcon(props.icon)}
             </div>
