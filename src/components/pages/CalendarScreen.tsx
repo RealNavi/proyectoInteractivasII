@@ -29,7 +29,7 @@ export default function CalendarScreen() {
       </div>
 
       {/* Notificaciones */}
-      <div className="w-full px-4 pt-10 pb-30 overflow-hidden">
+      <div className="w-full px-4 pt-40 pb-30 overflow-hidden">
         <h2 className="font-bold text-lg mb-4">
           {/* Estructurar la fecha */}
 
