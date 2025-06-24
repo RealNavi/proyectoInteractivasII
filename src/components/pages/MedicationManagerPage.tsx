@@ -126,3 +126,5 @@ export default function MedicationManagerPage() {
     </section>
   );
 }
+
+// Commit Bracnh: Sequeira-UI-Component
