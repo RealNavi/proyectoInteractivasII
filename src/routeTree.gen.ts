@@ -22,12 +22,9 @@ import { Route as NewpasswordRouteImport } from './routes/newpassword'
 import { Route as MedicinesRouteImport } from './routes/medicines'
 import { Route as MedicalregisterRouteImport } from './routes/medicalregister'
 import { Route as LoginRouteImport } from './routes/login'
-
-import { Route as CalendarRouteImport } from './routes/calendar'
-
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as ConfigNotificationsRouteImport } from './routes/config-notifications'
-
+import { Route as CalendarRouteImport } from './routes/calendar'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TermsRoute = TermsRouteImport.update({
@@ -95,11 +92,6 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-
-const CalendarRoute = CalendarRouteImport.update({
-  id: '/calendar',
-  path: '/calendar',
-
 const HelpRoute = HelpRouteImport.update({
   id: '/help',
   path: '/help',
@@ -108,7 +100,11 @@ const HelpRoute = HelpRouteImport.update({
 const ConfigNotificationsRoute = ConfigNotificationsRouteImport.update({
   id: '/config-notifications',
   path: '/config-notifications',
-
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalendarRoute = CalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -119,12 +115,9 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-
   '/calendar': typeof CalendarRoute
-
   '/config-notifications': typeof ConfigNotificationsRoute
   '/help': typeof HelpRoute
-
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -141,12 +134,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-
   '/calendar': typeof CalendarRoute
-
   '/config-notifications': typeof ConfigNotificationsRoute
   '/help': typeof HelpRoute
-
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -164,12 +154,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-
   '/calendar': typeof CalendarRoute
-
   '/config-notifications': typeof ConfigNotificationsRoute
   '/help': typeof HelpRoute
-
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -188,12 +175,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-
     | '/calendar'
-
     | '/config-notifications'
     | '/help'
-
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -210,12 +194,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-
     | '/calendar'
-
     | '/config-notifications'
     | '/help'
-
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -232,12 +213,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-
     | '/calendar'
-
     | '/config-notifications'
     | '/help'
-
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -255,12 +233,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-
   CalendarRoute: typeof CalendarRoute
-
   ConfigNotificationsRoute: typeof ConfigNotificationsRoute
   HelpRoute: typeof HelpRoute
-
   LoginRoute: typeof LoginRoute
   MedicalregisterRoute: typeof MedicalregisterRoute
   MedicinesRoute: typeof MedicinesRoute
@@ -369,13 +344,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-
-    '/calendar': {
-      id: '/calendar'
-      path: '/calendar'
-      fullPath: '/calendar'
-      preLoaderRoute: typeof CalendarRouteImport
-
     '/help': {
       id: '/help'
       path: '/help'
@@ -388,7 +356,13 @@ declare module '@tanstack/react-router' {
       path: '/config-notifications'
       fullPath: '/config-notifications'
       preLoaderRoute: typeof ConfigNotificationsRouteImport
-
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -403,12 +377,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-
   CalendarRoute: CalendarRoute,
-
   ConfigNotificationsRoute: ConfigNotificationsRoute,
   HelpRoute: HelpRoute,
-
   LoginRoute: LoginRoute,
   MedicalregisterRoute: MedicalregisterRoute,
   MedicinesRoute: MedicinesRoute,
