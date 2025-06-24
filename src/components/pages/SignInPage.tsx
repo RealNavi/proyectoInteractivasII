@@ -1,4 +1,4 @@
-import { IconBrandFacebookFilled, IconBrandAppleFilled,IconChevronLeft } from '@tabler/icons-react';
+import { IconBrandFacebookFilled, IconBrandGoogleFilled,IconChevronLeft } from '@tabler/icons-react';
 import { Link } from '@tanstack/react-router';
 import ButtonMain from '../ui/ButtonMain';
 import BackgroundLogin from '../ui/BackgroundLogin';
@@ -59,7 +59,7 @@ export default function SingInPage (props:SingInProps) {
                                             </a>
                                             
                                             <a className="" href="https://account.apple.com/es">
-                                                <IconBrandAppleFilled className='size-13 text-cian-tertiary'/>
+                                                <IconBrandGoogleFilled className='size-13 text-cian-tertiary'/>
                                             </a>
                                         </div>
 

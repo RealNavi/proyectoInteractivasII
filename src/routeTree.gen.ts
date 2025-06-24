@@ -9,10 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SigninRouteImport } from './routes/signin'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as ReportProblemRouteImport } from './routes/report-problem'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as PasswordRouteImport } from './routes/password'
 import { Route as NotificationsRouteImport } from './routes/notifications'
@@ -20,9 +22,19 @@ import { Route as NewpasswordRouteImport } from './routes/newpassword'
 import { Route as MedicinesRouteImport } from './routes/medicines'
 import { Route as MedicalregisterRouteImport } from './routes/medicalregister'
 import { Route as LoginRouteImport } from './routes/login'
+
 import { Route as CalendarRouteImport } from './routes/calendar'
+
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as ConfigNotificationsRouteImport } from './routes/config-notifications'
+
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
   path: '/signup',
@@ -41,6 +53,11 @@ const SettingsRoute = SettingsRouteImport.update({
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportProblemRoute = ReportProblemRouteImport.update({
+  id: '/report-problem',
+  path: '/report-problem',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProfileRoute = ProfileRouteImport.update({
@@ -78,9 +95,20 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+
 const CalendarRoute = CalendarRouteImport.update({
   id: '/calendar',
   path: '/calendar',
+
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConfigNotificationsRoute = ConfigNotificationsRouteImport.update({
+  id: '/config-notifications',
+  path: '/config-notifications',
+
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -91,7 +119,12 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+
   '/calendar': typeof CalendarRoute
+
+  '/config-notifications': typeof ConfigNotificationsRoute
+  '/help': typeof HelpRoute
+
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -99,14 +132,21 @@ export interface FileRoutesByFullPath {
   '/notifications': typeof NotificationsRoute
   '/password': typeof PasswordRoute
   '/profile': typeof ProfileRoute
+  '/report-problem': typeof ReportProblemRoute
   '/search': typeof SearchRoute
   '/settings': typeof SettingsRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+
   '/calendar': typeof CalendarRoute
+
+  '/config-notifications': typeof ConfigNotificationsRoute
+  '/help': typeof HelpRoute
+
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -114,15 +154,22 @@ export interface FileRoutesByTo {
   '/notifications': typeof NotificationsRoute
   '/password': typeof PasswordRoute
   '/profile': typeof ProfileRoute
+  '/report-problem': typeof ReportProblemRoute
   '/search': typeof SearchRoute
   '/settings': typeof SettingsRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+
   '/calendar': typeof CalendarRoute
+
+  '/config-notifications': typeof ConfigNotificationsRoute
+  '/help': typeof HelpRoute
+
   '/login': typeof LoginRoute
   '/medicalregister': typeof MedicalregisterRoute
   '/medicines': typeof MedicinesRoute
@@ -130,16 +177,23 @@ export interface FileRoutesById {
   '/notifications': typeof NotificationsRoute
   '/password': typeof PasswordRoute
   '/profile': typeof ProfileRoute
+  '/report-problem': typeof ReportProblemRoute
   '/search': typeof SearchRoute
   '/settings': typeof SettingsRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+
     | '/calendar'
+
+    | '/config-notifications'
+    | '/help'
+
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -147,14 +201,21 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/password'
     | '/profile'
+    | '/report-problem'
     | '/search'
     | '/settings'
     | '/signin'
     | '/signup'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+
     | '/calendar'
+
+    | '/config-notifications'
+    | '/help'
+
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -162,14 +223,21 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/password'
     | '/profile'
+    | '/report-problem'
     | '/search'
     | '/settings'
     | '/signin'
     | '/signup'
+    | '/terms'
   id:
     | '__root__'
     | '/'
+
     | '/calendar'
+
+    | '/config-notifications'
+    | '/help'
+
     | '/login'
     | '/medicalregister'
     | '/medicines'
@@ -177,15 +245,22 @@ export interface FileRouteTypes {
     | '/notifications'
     | '/password'
     | '/profile'
+    | '/report-problem'
     | '/search'
     | '/settings'
     | '/signin'
     | '/signup'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+
   CalendarRoute: typeof CalendarRoute
+
+  ConfigNotificationsRoute: typeof ConfigNotificationsRoute
+  HelpRoute: typeof HelpRoute
+
   LoginRoute: typeof LoginRoute
   MedicalregisterRoute: typeof MedicalregisterRoute
   MedicinesRoute: typeof MedicinesRoute
@@ -193,14 +268,23 @@ export interface RootRouteChildren {
   NotificationsRoute: typeof NotificationsRoute
   PasswordRoute: typeof PasswordRoute
   ProfileRoute: typeof ProfileRoute
+  ReportProblemRoute: typeof ReportProblemRoute
   SearchRoute: typeof SearchRoute
   SettingsRoute: typeof SettingsRoute
   SigninRoute: typeof SigninRoute
   SignupRoute: typeof SignupRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/signup': {
       id: '/signup'
       path: '/signup'
@@ -227,6 +311,13 @@ declare module '@tanstack/react-router' {
       path: '/search'
       fullPath: '/search'
       preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/report-problem': {
+      id: '/report-problem'
+      path: '/report-problem'
+      fullPath: '/report-problem'
+      preLoaderRoute: typeof ReportProblemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/profile': {
@@ -278,11 +369,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+
     '/calendar': {
       id: '/calendar'
       path: '/calendar'
       fullPath: '/calendar'
       preLoaderRoute: typeof CalendarRouteImport
+
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/config-notifications': {
+      id: '/config-notifications'
+      path: '/config-notifications'
+      fullPath: '/config-notifications'
+      preLoaderRoute: typeof ConfigNotificationsRouteImport
+
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -297,7 +403,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+
   CalendarRoute: CalendarRoute,
+
+  ConfigNotificationsRoute: ConfigNotificationsRoute,
+  HelpRoute: HelpRoute,
+
   LoginRoute: LoginRoute,
   MedicalregisterRoute: MedicalregisterRoute,
   MedicinesRoute: MedicinesRoute,
@@ -305,10 +416,12 @@ const rootRouteChildren: RootRouteChildren = {
   NotificationsRoute: NotificationsRoute,
   PasswordRoute: PasswordRoute,
   ProfileRoute: ProfileRoute,
+  ReportProblemRoute: ReportProblemRoute,
   SearchRoute: SearchRoute,
   SettingsRoute: SettingsRoute,
   SigninRoute: SigninRoute,
   SignupRoute: SignupRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
