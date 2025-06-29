@@ -10,20 +10,20 @@ interface NewReminderProps {
 
 interface ReminderFormData {
   icon:
-    | "medicamento"
-    | "ejercicio"
-    | "aviso"
-    | "recordatorio"
-    | "notas"
-    | "doctor"
-    | "comida"
-    | "otro";
+  | "medicamento"
+  | "ejercicio"
+  | "aviso"
+  | "recordatorio"
+  | "notas"
+  | "doctor"
+  | "comida"
+  | "otro";
   title: string;
   description: string;
   location: string;
   date: string;
   hour: string;
-  repeat: string;
+  repeat: boolean;
 }
 
 export default function NewReminder(props: NewReminderProps) {
@@ -34,7 +34,7 @@ export default function NewReminder(props: NewReminderProps) {
     location: "",
     date: "",
     hour: "",
-    repeat: "",
+    repeat: false,
   });
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -55,12 +55,12 @@ export default function NewReminder(props: NewReminderProps) {
             </button>
             <h1 className="text-sm">Nuevo Recordatorio</h1>
             <Link to="/calendar">
-            <Button
-              type="button"
-              style="bg-cian-secondary w-12 h-12 rounded-full p-2"
-              icon="../src/assets/calendar-cian.svg"
-              text="Calendar"
-            />
+              <Button
+                type="button"
+                style="bg-cian-secondary w-12 h-12 rounded-full p-2"
+                icon="../src/assets/calendar-cian.svg"
+                text="Calendar"
+              />
             </Link>
           </div>
           <form onSubmit={handleSubmit} className="pt-5 flex flex-col mb-50">
@@ -74,26 +74,34 @@ export default function NewReminder(props: NewReminderProps) {
               }
             />
             <div className="flex flex-col gap-3 pt-7">
-              <input
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                placeholder="Titulo"
-                value={formData.title}
-                onChange={(e) =>
-                  setFormData({ ...formData, title: e.target.value })
-                }
-                type="text"
-                required
-              />
-              <input
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                placeholder="Descripcion"
-                value={formData.description}
-                onChange={(e) =>
-                  setFormData({ ...formData, description: e.target.value })
-                }
-                type="text"
-                required
-              />
+              <div className="flex flex-col">
+                <label className="font-xs">Titulo</label>
+                <input
+                  className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
+                  placeholder="Titulo"
+                  value={formData.title}
+                  onChange={(e) =>
+                    setFormData({ ...formData, title: e.target.value })
+                  }
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label className="font-xs">Descripción</label>
+                <input
+                  className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
+                  placeholder="Descripcion"
+                  value={formData.description}
+                  onChange={(e) =>
+                    setFormData({ ...formData, description: e.target.value })
+                  }
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label className="font-xs">Ubicación</label>
               <input
                 className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
                 placeholder="Ubicacion (Opcional)"
@@ -102,39 +110,48 @@ export default function NewReminder(props: NewReminderProps) {
                   setFormData({ ...formData, location: e.target.value })
                 }
                 type="text"
-              />
+                />
             </div>
+                </div>
             <div className="flex flex-col gap-3 pt-7">
-              <input
-                placeholder="Fecha"
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                value={formData.date}
-                onChange={(e) =>
-                  setFormData({ ...formData, date: e.target.value })
-                }
-                type="date"
-                required
-              />
-              <input
-                placeholder="Hora"
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                value={formData.hour}
-                onChange={(e) =>
-                  setFormData({ ...formData, hour: e.target.value })
-                }
-                type="time"
-                required
-              />
+              <div className="flex flex-col">
+                <label className="font-xs"> Fecha</label>
+                <input
+                  placeholder="Fecha"
+                  className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
+                  value={formData.date}
+                  onChange={(e) =>
+                    setFormData({ ...formData, date: e.target.value })
+                  }
+                  type="date"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label className="font-xs" >Hora </label>
+                <input
+                  placeholder="Hora"
+                  className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
+                  value={formData.hour}
+                  onChange={(e) =>
+                    setFormData({ ...formData, hour: e.target.value })
+                  }
+                  type="time"
+                  required
+                />
+              </div>
             </div>
             <div className="flex flex-col pt-7">
-              <input
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                value={formData.repeat}
-                onChange={(e) =>
-                  setFormData({ ...formData, repeat: e.target.value })
-                }
-                type="text"
-              />
+              <label className="font-xs"> Repetir
+                <input
+                  className="ml-5 accent-orange-main transition-all duration-200 ease-in-out shadow-sm focus:ring-2 focus:ring-orange-main"
+                  checked={formData.repeat}
+                  onChange={(e) =>
+                    setFormData({ ...formData, repeat: e.target.checked })
+                  }
+                  type="checkbox"
+                />
+              </label>
             </div>
             <div className="flex justify-center">
               <Button
