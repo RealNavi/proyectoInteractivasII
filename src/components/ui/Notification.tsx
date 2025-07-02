@@ -15,32 +15,32 @@ export default function Notification(props: NotificationProps) {
     let iconStyleClass = 'bg-' + props.color + ' rounded-full h-9 w-9 p-1.5 relative';
 
     const selectedIcon = (selected: string): JSX.Element => {
-    const baseClass = "absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white";
+    const style = "absolute h-6 w-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white";
 
     switch (selected) {
         case "medicamento":
-            return <IconPillFilled className={baseClass} />;
+            return <IconPillFilled className={style} />;
         case "ejercicio":
-            return <IconTreadmill className={baseClass} />;
+            return <IconTreadmill className={style} />;
         case "aviso":
-            return <IconBell className={baseClass} />;
+            return <IconBell className={style} />;
         case "recordatorio":
-            return <IconHourglassHigh className={baseClass} />;
+            return <IconHourglassHigh className={style} />;
         case "nota":
-            return <IconNote className={baseClass} />;
+            return <IconNote className={style} />;
         case "doctor":
-            return <IconStethoscope className={baseClass} />;
+            return <IconStethoscope className={style} />;
         case "comida":
-            return <IconToolsKitchen2 className={baseClass} />;
+            return <IconToolsKitchen2 className={style} />;
         case "otro":
-            return <IconDots className={baseClass} />;
+            return <IconDots className={style} />;
         default:
-            return <IconPillFilled className={baseClass} />;
+            return <IconPillFilled className={style} />;
     }
     }
 
     return (
-        <div className="grid grid-cols-[10%_80%_10%] gap-3 items-center pt-3">
+        <div className="grid grid-cols-[15%_60%_25%] gap-3 items-center pt-3">
             <div className={iconStyleClass}>
                 {selectedIcon(props.icon)}
             </div>

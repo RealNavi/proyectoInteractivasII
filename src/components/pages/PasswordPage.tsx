@@ -2,22 +2,19 @@ import {IconChevronLeft} from "@tabler/icons-react";
 import { Link } from '@tanstack/react-router';
 import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog"
 
-import BackgroundLogin from "./BackgroundLogin";
-
+import BackgroundLogin from "../ui/BackgroundLogin";
 interface BackgroundLoginProps {
     image: string;
     style: string;
 }
-
-interface NewPasswordProps {
+interface PasswordProps {
     background: BackgroundLoginProps;
     title: string;
     button1: string;
     button2: string;
 }
 
-
-export default function NewPassword(props: NewPasswordProps) {
+export default function PasswordPage(props: PasswordProps) {
     return (
         <div>
             <section className="w-full h-screen flex">
@@ -44,24 +41,25 @@ export default function NewPassword(props: NewPasswordProps) {
                                     <div className="flex items-center justify-center mt-10 space-x-10">
                                         <AlertDialog>
                                             <AlertDialogTrigger asChild>
-                                                <button className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light">
-                                                    {props.button1}
-                                                </button>
+                                                    <button className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light">
+                                                        {props.button1}
+                                                    </button>
                                             </AlertDialogTrigger>
+                                    
                                             <AlertDialogContent className="bg-cian-secondary flex flex-col border-0 p-8">
                                                 <AlertDialogHeader>
-                                                    <AlertDialogTitle className="font-confortaa text-2xl text-center text-black mt-8">Fuera de servicio</AlertDialogTitle>
-                                                    <AlertDialogDescription className="font-confortaa text-xs text-center text-black mt-8">
-                                                        Por estos momentos no se le puede brindar el servicio de cuna nueva contraseña. 
-                                                        Esta funcionalidad se encuentra en pausa, intentelo más tarde.
+                                                    <AlertDialogTitle className="font-confortaa text-2xl text-center text-black">Fuera de servicio</AlertDialogTitle>
+                                                    <AlertDialogDescription className="font-confortaa text-xs text-center text-black">
+                                                        Por estos momentos no se le puede brindar el servicio de cambiar su contraseña. 
+                                                        Esta funcionalidad se encuentra en pausa.
                                                     </AlertDialogDescription>
                                                 </AlertDialogHeader>
                                                 <AlertDialogFooter>    
-                                                    <AlertDialogCancel className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 border-0 hover:bg-orange-light">Cancelar</AlertDialogCancel>
+                                                    <AlertDialogCancel className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 border-0 hover:bg-orange-light">Cancel</AlertDialogCancel>
                                                 </AlertDialogFooter>
                                             </AlertDialogContent>
                                         </AlertDialog>
-
+                                            
                                         <Link to='/login'>                                
                                             <button className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light">
                                                     {props.button2}
@@ -72,7 +70,7 @@ export default function NewPassword(props: NewPasswordProps) {
                                 </section>
                             </section>  
                         </section> 
-                    </div>   
+                    </div>  
                 </div>
             </section>
         </div>
