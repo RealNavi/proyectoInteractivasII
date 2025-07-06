@@ -18,7 +18,7 @@ export default function BottonNavBar() {
     }, [showReminder]);
     return (
         <>
-            {showReminder && <NewReminder onSubmit={(formData)=>{console.log(formData)}} onClose={() => setShowReminder(false)} />}
+            {showReminder && <NewReminder onClose={() => setShowReminder(false)} />}
             <section className="fixed bottom-0 w-full">
                 <div className="bg-cian-main flex justify-between py-5 px-10 items-center">
                     <Link to='/'><IconHome className='size-7 text-white' /> </Link>

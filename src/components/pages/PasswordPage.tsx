@@ -46,7 +46,7 @@ export default function PasswordPage(props: PasswordProps) {
                                                     </button>
                                             </AlertDialogTrigger>
                                     
-                                            <AlertDialogContent className="bg-cian-secondary flex flex-col border-0 p-8">
+                                            <AlertDialogContent className=" flex flex-col border-0 p-8">
                                                 <AlertDialogHeader>
                                                     <AlertDialogTitle className="font-confortaa text-2xl text-center text-black">Fuera de servicio</AlertDialogTitle>
                                                     <AlertDialogDescription className="font-confortaa text-xs text-center text-black">
