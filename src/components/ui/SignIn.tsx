@@ -1,4 +1,5 @@
-import {IconBrandFacebook, IconBrandAppleFilled, IconChevronLeft} from "@tabler/icons-react";
+import {IconBrandFacebookFilled, IconBrandGoogleFilled, IconChevronLeft } from "@tabler/icons-react";
+import { Link } from '@tanstack/react-router';
 
 import BackgroundLogin from "./BackgroundLogin";
 import ButtonMain from "./ButtonMain";
@@ -60,11 +61,11 @@ export default function SignIn(props: SignInProps) {
                                             
                                         <div className="flex space-x-10 items-center justify-center mt-5">
                                             <a className="w-12 h-10" href="https://www.facebook.com/">
-                                                <IconBrandFacebook className="text-cian-tertiary size-13"/>
+                                                <IconBrandFacebookFilled className="text-cian-tertiary size-13"/>
                                             </a>
                                             
                                             <a className="w-10 h-10" href="https://account.apple.com/es">
-                                                <IconBrandAppleFilled className="text-cian-tertiary size-13"/>
+                                                <IconBrandGoogleFilled className="text-cian-tertiary size-13"/>
                                             </a>
                                         </div>
 

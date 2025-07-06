@@ -1,5 +1,5 @@
 import {IconChevronLeft} from "@tabler/icons-react";
-
+import { Link } from '@tanstack/react-router';
 
 import BackgroundLogin from './BackgroundLogin';
 import ButtonMain from './ButtonMain';
