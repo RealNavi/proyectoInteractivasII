@@ -5,25 +5,25 @@ import { Link } from "@tanstack/react-router";
 
 interface NewReminderProps {
   onClose: () => void;
-  onSubmit: (formData: ReminderFormData) => void;
 }
 
 interface ReminderFormData {
   icon:
-  | "medicamento"
-  | "ejercicio"
-  | "aviso"
-  | "recordatorio"
-  | "notas"
-  | "doctor"
-  | "comida"
-  | "otro";
+    | "medicamento"
+    | "ejercicio"
+    | "aviso"
+    | "recordatorio"
+    | "notas"
+    | "doctor"
+    | "comida"
+    | "otro";
   title: string;
   description: string;
   location: string;
   date: string;
   hour: string;
   repeat: boolean;
+  profile_id: string;
 }
 
 export default function NewReminder(props: NewReminderProps) {
@@ -35,20 +35,51 @@ export default function NewReminder(props: NewReminderProps) {
     date: "",
     hour: "",
     repeat: false,
+    profile_id: "123456789",
   });
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    props.onSubmit(formData);
+
+    const payload = {
+      ...formData,
+      time: formData.hour,
+    };
+
+    delete (payload as any).hour;
+
+    try {
+      const response = await fetch("http://medical.test/api/reminder/store", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Errores:", errorData);
+        alert("Hubo un error al crear el recordatorio");
+        return;
+      }
+
+      const data = await response.json();
+      console.log("Recordatorio creado:", data);
+      alert("Recordatorio creado exitosamente");
+      props.onClose();
+    } catch (error) {
+      console.error("Error de red:", error);
+      alert("Error al conectar con el servidor");
+    }
   };
+
   return (
     <>
-      <div
-        onClick={props.onClose}
-        className="fixed inset-0 bg-black/50 z-10"
-      ></div>
+      <div onClick={props.onClose} className="fixed inset-0 bg-black/50 z-10"></div>
       <section className="fixed mt-50 inset-0 h-screen bg-white z-10 rounded-t-4xl font-comfortaa items-end ">
-        <div className=" w-full max-h-[90vh] overflow-y-auto px-5 pb-5">
+        <div className="w-full max-h-[90vh] overflow-y-auto px-5 pb-5">
           <div className="flex justify-between items-center pt-5">
             <button type="button" onClick={props.onClose} className="text-xs">
               Cancelar
@@ -102,20 +133,20 @@ export default function NewReminder(props: NewReminderProps) {
               </div>
               <div className="flex flex-col">
                 <label className="font-xs">Ubicación</label>
-              <input
-                className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
-                placeholder="Ubicacion (Opcional)"
-                value={formData.location}
-                onChange={(e) =>
-                  setFormData({ ...formData, location: e.target.value })
-                }
-                type="text"
+                <input
+                  className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
+                  placeholder="Ubicacion (Opcional)"
+                  value={formData.location}
+                  onChange={(e) =>
+                    setFormData({ ...formData, location: e.target.value })
+                  }
+                  type="text"
                 />
+              </div>
             </div>
-                </div>
             <div className="flex flex-col gap-3 pt-7">
               <div className="flex flex-col">
-                <label className="font-xs"> Fecha</label>
+                <label className="font-xs">Fecha</label>
                 <input
                   placeholder="Fecha"
                   className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
@@ -128,7 +159,7 @@ export default function NewReminder(props: NewReminderProps) {
                 />
               </div>
               <div className="flex flex-col">
-                <label className="font-xs" >Hora </label>
+                <label className="font-xs">Hora</label>
                 <input
                   placeholder="Hora"
                   className="bg-cian-secondary h-10 rounded-lg text-sm text-black/50 px-4"
@@ -142,7 +173,8 @@ export default function NewReminder(props: NewReminderProps) {
               </div>
             </div>
             <div className="flex flex-col pt-7">
-              <label className="font-xs"> Repetir
+              <label className="font-xs">
+                Repetir
                 <input
                   className="ml-5 accent-orange-main transition-all duration-200 ease-in-out shadow-sm focus:ring-2 focus:ring-orange-main"
                   checked={formData.repeat}
