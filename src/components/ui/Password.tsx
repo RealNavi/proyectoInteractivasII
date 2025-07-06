@@ -2,11 +2,13 @@ import {IconChevronLeft} from "@tabler/icons-react";
 import { Link } from '@tanstack/react-router';
 import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog"
 
-import BackgroundLogin from "../ui/BackgroundLogin";
+import BackgroundLogin from "./BackgroundLogin";
+
 interface BackgroundLoginProps {
     image: string;
     style: string;
 }
+
 interface PasswordProps {
     background: BackgroundLoginProps;
     title: string;
@@ -14,7 +16,7 @@ interface PasswordProps {
     button2: string;
 }
 
-export default function PasswordPage(props: PasswordProps) {
+export default function Password(props: PasswordProps) {
     return (
         <div>
             <section className="w-full h-screen flex">
@@ -41,9 +43,9 @@ export default function PasswordPage(props: PasswordProps) {
                                     <div className="flex items-center justify-center mt-10 space-x-10">
                                         <AlertDialog>
                                             <AlertDialogTrigger asChild>
-                                                    <button className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light">
-                                                        {props.button1}
-                                                    </button>
+                                                <button className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 hover:bg-orange-light">
+                                                    {props.button1}
+                                                </button>
                                             </AlertDialogTrigger>
                                     
                                             <AlertDialogContent className="bg-cian-secondary flex flex-col border-0 p-8">
@@ -55,7 +57,7 @@ export default function PasswordPage(props: PasswordProps) {
                                                     </AlertDialogDescription>
                                                 </AlertDialogHeader>
                                                 <AlertDialogFooter>    
-                                                    <AlertDialogCancel className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 border-0 hover:bg-orange-light">Cancel</AlertDialogCancel>
+                                                    <AlertDialogCancel className="font-confortaa bg-orange-main text-xs rounded-4xl py-3 px-13 border-0 hover:bg-orange-light">Cancelar</AlertDialogCancel>
                                                 </AlertDialogFooter>
                                             </AlertDialogContent>
                                         </AlertDialog>
