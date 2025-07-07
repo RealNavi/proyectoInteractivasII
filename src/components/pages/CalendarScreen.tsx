@@ -48,6 +48,8 @@ export default function CalendarScreen() {
             onSelect={setDate}
             className="block w-full max-w-md px-5 mb-10"
             captionLayout="dropdown"
+            startMonth={new Date(2000,0)}
+            endMonth={new Date(2100,11)}
           />
         </div>
 
